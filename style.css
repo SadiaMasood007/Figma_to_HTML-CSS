@@ -27,6 +27,21 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.7); 
+    animation: shadowMove 2s infinite;
+    transition: box-shadow 0.3s ease-in-out;
+}
+@keyframes shadowMove {
+  0% {
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.7); 
+  }
+  50% {
+    box-shadow: 8px 0 10px rgba(0, 0, 0, 0.7); 
+  }
+  100% {
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.7); 
+  }
+  
 }
 
 .button button:hover {
@@ -210,6 +225,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .text{
   margin-top: 20px;
   margin-bottom: 0;
@@ -257,7 +273,7 @@
 .animated-text {
   display: flex;
   flex-direction: column;
-  animation: swipeUp 5s infinite;
+  animation: swipeUp 4s infinite;
 }
 
 .animated-text span {
