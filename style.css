@@ -362,3 +362,246 @@
     height: 120px;
   }
 }
+.deal-wrapper {
+  padding: 2rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #184363;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #3ac569;
+  border-radius: 2px;
+  margin: 8px auto 0 auto;
+}
+
+.deal-cards {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.deal-card {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 600px;
+  gap: 20px;
+  align-items: center;
+}
+
+.deal-img {
+  width: 180px;
+  height: auto;
+  object-fit: fill;
+}
+
+.deal-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.deal-info h3 {
+  font-size: 18px;
+  color: #184363;
+  margin: 0.5rem 0;
+}
+
+.deal-info p {
+  font-weight: bold;
+  color: #3ac569;
+  margin-bottom: 0.5rem;
+}
+
+.deal-info ul {
+  list-style-type: '\2713';
+  padding-left: 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+.deal-btn {
+  margin-top: 10px;
+  background-color: #EDF4F6;
+  color: #184363;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; 
+  font-size: 16px;
+}
+
+.deal-btn .cart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+.medical-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.medical-card {
+  position: relative;
+  color: #184363;
+  border-radius: 20px;
+  padding: 20px;
+  width: 600px;
+  height: 200px;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.medical-card-mask {
+  background-image: url("C:/Buggcy_Internship_projects/Figma_to_HTMLCSS/Figma_to_HTML-CSS/assets/images/div.banner-back.png");
+
+}
+
+.medical-card-medicine {
+ background-image: url("C:/Buggcy_Internship_projects/Figma_to_HTMLCSS/Figma_to_HTML-CSS/assets/images/div.banner-back2.png");
+}
+
+.medical-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #184363; 
+  z-index: 2;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #FFA500;
+  color: white;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+.medical-card .deal-btn {
+  width: fit-content;
+  background-color: #184363;
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+}
+ .gnarly {
+  padding: 3rem;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-gif {
+  position: relative;
+  width: 450px;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.polygon {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: auto;
+  pointer-events: none;
+}
+
+.content {
+  font-weight: 500;
+  font-size: 72px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+
+.content span {
+  line-height: 1.2;
+}
+@media (max-width: 650px) {
+  .gnarly {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .content {
+    font-size: 36px;
+    text-align: center;
+    align-items: center;
+  }
+  .img-gif{
+    width:300px;
+  }
+
+  .gif {
+    width: 200px;
+  }
+
+}
+
+.action-words p{
+  font-family: 'Outfit', sans-serif;
+  color:#184363;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding:3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  margin-top: 3px;
+  
+}
