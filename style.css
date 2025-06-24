@@ -1,55 +1,76 @@
 .nav-bar {
-    list-style-type: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center; 
-    justify-content: space-around;
-    padding: 20px; 
-    font-family: 'Outfit', sans-serif;  
+  list-style-type: none;
+  font-weight: 500;
+  display: flex;
+  /* flex-wrap: wrap;  */
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Outfit', sans-serif;
 }
 
 .nav-bar a:not(.bar-1) {
-    font-size: 14px;  
-    margin: 0 10px;
-    color: black;
-    text-decoration: none;
+  font-size: 14px;
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
 }
 
 .bar-1 {
-    font-size: 24px;  
+  font-size: 24px;
+  margin-right: 20px;
 }
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-actions img {
+  width: 24px;
+  height: 24px;
+  /* object-fit: contain; */
+  max-width: 100%;
+}
+
 .button button {
-    width: 154px;                    
-    height: 45px;                    
-    background-color: #3CDA5F;
-    border: 2px solid transparent;   
-    border-radius: 10px;             
-    padding: 0 20px;                
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: box-shadow 0.3s ease-in-out;
-    animation: shadowMove 2s infinite;
+  width: 154px;
+  height: 45px;
+  background-color: #3CDA5F;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  animation: shadowMove 2s infinite;
 }
 
 @keyframes shadowMove {
   0% {
-    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.7); 
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.7);
   }
   50% {
-    box-shadow: 8px 0 10px rgba(0, 0, 0, 0.7); 
+    box-shadow: 8px 0 10px rgba(0, 0, 0, 0.7);
   }
   100% {
-    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.7); 
+    box-shadow: -8px 0 10px rgba(0, 0, 0, 0.7);
   }
-  
 }
 
 .button button:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
+
 #menu-toggle {
   display: none;
 }
@@ -59,20 +80,17 @@
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
-  margin-left: auto;
 }
 
 
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .nav-bar {
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: flex-start;
   }
 
   .hamburger {
     display: block;
-    order: 2;
   }
 
   .nav-links {
@@ -80,7 +98,7 @@
     flex-direction: column;
     width: 100%;
   }
-  
+
   #menu-toggle:checked + .hamburger + .nav-links {
     display: flex;
   }
@@ -91,15 +109,20 @@
     text-align: left;
   }
 
-  .button{
-    display: block;
-    order: 1;
+  .nav-actions {
+    margin-top: 10px;
+    align-self: flex-end;
+    flex-wrap: wrap;
   }
-  .nav-bar img {
-    display: inline-block;
-    order: 3;
+
+  .button button {
+    width: auto;
+    height: 40px;
   }
 }
+
+
+
   .search-container {
     background-color: #EDF4F6;
     padding: 20px;
@@ -177,12 +200,13 @@
   position: relative;
   margin-top: 20px;
   width: fit-content;
+  gap:10px;
 }
 .image1 {
   position: relative;
   top: 0;
   left: 0;
-  width:70%;
+  width:80%;
   height:auto;
 }
 
@@ -190,7 +214,7 @@
   position: absolute;
   top: 20px; 
   left: 50px;
-  width: 70%;
+  width: 80%;
   height: auto;
   z-index: 1;
 }
@@ -230,11 +254,15 @@
 }
 
 .text{
+  font-family: 'Outfit', sans-serif;
+  font-size: 72px;
   margin-top: 20px;
+  font-weight:500;
   margin-bottom: 0;
 }
 .text p {
   margin: 0;  
+  color:#0A2640;
   padding: 5px 0; 
 }
 .no-action{
@@ -250,7 +278,7 @@
 
 }
 .text-animation{
-  font-size: 70px;
+  font-size: 72px;
   margin: 0; 
 
 
@@ -268,8 +296,8 @@
 .animated-text-wrapper {
   height: 80px;
   overflow: hidden;
-  font-size: 70px;
-  font-weight: bold;
+  font-size: 72px;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -309,6 +337,7 @@
 }
 
 .block3 p {
+  font-family: 'Outfit', sans-serif;
   font-size: 24px;
   font-weight: bold;
   color: #184363;
@@ -331,7 +360,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   padding: 0;
   list-style: none;
 }
@@ -344,6 +373,7 @@
   padding: 16px;
   width: 140px;
   transition: transform 0.3s ease;
+  margin-bottom: 8px;
 }
 
 .products li:hover {
@@ -351,9 +381,10 @@
 }
 
 .products img {
-  width: 100px;
-  height: auto;
+  width: 195px;
+  height: 200px;
   margin-bottom: 8px;
+  border:0.8px;
 }
 
 .products span {
@@ -402,16 +433,21 @@
   flex-direction: row;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 20px;
+  padding: 0  20px 0 0;
   width: 600px;
   gap: 20px;
   align-items: center;
+  overflow: hidden;
 }
 
 .deal-img {
-  width: 180px;
-  height: auto;
+  width: 302.8px;
+  height: 302.8px;
   object-fit: fill;
+  display: block;
+  margin-left: 0; /* Ensure no left spacing */
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .deal-info {
@@ -617,7 +653,8 @@
 }
 
 .reviews-section h2 {
-  font-size: 2rem;
+  font-size:48px;
+  font-weight:400;
   color: #1d3557;
   margin-bottom: 40px;
 }
@@ -632,9 +669,10 @@
 .review-card {
   background-color: white;
   border-radius: 12px;
-  padding: 20px;
+  padding: 40px;
   max-width: 300px;
-  width: 100%;
+  width: 360px;
+  height:358px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: left;
   position: relative;
@@ -642,7 +680,7 @@
 
 .review-card p {
   margin-bottom: 20px;
-  font-size: 0.95rem;
+  font-size: 24px;;
 }
 
 .user-info {
@@ -653,19 +691,19 @@
 
 .user-info img {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 58px;
+  height: 58px;
 }
 
 .user-info h4 {
-  margin: 0;
-  font-size: 0.9rem;
+  margin: 5px 0 0 0;
+  font-size: 16px;
   color: #1d3557;
 }
 
 .user-info p {
-  margin: 0;
-  font-size: 0.8rem;
+  margin: 6px 0 0 0;
+  font-size: 14px;
   color: #457b9d;
 }
 
@@ -675,20 +713,23 @@
 
 .last-card .arrows {
   position: absolute;
-  top: -40px;       
-  right: -40px;     
+  top: -60px;       
+  right: -43px;     
   display: flex;
   gap: 10px;
   z-index: 5;
+  width: 74.05714416503933px;
+  height:72px;
 }
 
 
 .arrow {
   background-color: white;
+  color:#0A2640;
   border: none;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 37.028572082519666px;
+  height: 39px;
   font-size: 1.2rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   cursor: default;
