@@ -1,8 +1,14 @@
+.case {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .nav-bar {
   list-style-type: none;
   font-weight: 500;
   display: flex;
-  /* flex-wrap: wrap;  */
+
   align-items: center;
   justify-content: space-between;
   padding: 20px;
@@ -29,13 +35,13 @@
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-wrap: nowrap;
 }
 
 .nav-actions img {
   width: 24px;
   height: 24px;
-  /* object-fit: contain; */
   max-width: 100%;
 }
 
@@ -81,13 +87,24 @@
   cursor: pointer;
   padding: 10px;
 }
-
-
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
   }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+}
+
+
+@media (max-width: 546px) {
 
   .hamburger {
     display: block;
@@ -103,11 +120,7 @@
     display: flex;
   }
 
-  .nav-links a {
-    padding: 10px;
-    font-size: 16px;
-    text-align: left;
-  }
+
 
   .nav-actions {
     margin-top: 10px;
@@ -119,8 +132,23 @@
     width: auto;
     height: 40px;
   }
-}
+} 
+@media (max-width: 496px) {
+  .button button {
+    width: 80px;
+    height: 36px;
+    font-size: 12px;
+    padding: 0 10px;
+  }
 
+  .nav-actions img {
+    width: 18px;
+    height: 18px;
+  }
+  .hamburger{
+    font-size:20px ;
+  }
+}
 
 
   .search-container {
@@ -128,6 +156,7 @@
     padding: 20px;
     display: flex;
     justify-content: center;
+   
 }
 
 .search-form {
@@ -139,6 +168,8 @@
 }
 
 .category-btn {
+    width:156px;
+    height:45px;
     background-color: white;
     border: 1px solid #ccc;
     color:#184363;
@@ -158,6 +189,7 @@
     overflow: hidden;
     background-color: white;
     border: 1px solid #ccc;
+  
 }
 
 .search-bar input {
@@ -178,6 +210,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 47px;
 }
 @media (max-width: 660px) {
   .search-form {
@@ -321,19 +354,20 @@
   100% { transform: translateY(0); }
 }
 
- @media(max-width: 495px) {
+ @media(max-width: 565px) {
   .animated-text-wrapper {
     height: 100px; 
   }
   .animated-text span {
-    font-size: 50px; 
+    font-size: 10vw; 
     flex-wrap: nowrap; 
   }
 
 }
 .block3 {
   text-align: center;
-  padding: 2rem;
+  /* padding: 2rem; */
+  margin-top: 2.5rem;
 }
 
 .block3 p {
@@ -373,7 +407,7 @@
   padding: 16px;
   width: 140px;
   transition: transform 0.3s ease;
-  margin-bottom: 8px;
+  margin-bottom: 2rem;
 }
 
 .products li:hover {
@@ -383,7 +417,7 @@
 .products img {
   width: 195px;
   height: 200px;
-  margin-bottom: 8px;
+  margin-bottom: 2rem;
   border:0.8px;
 }
 
@@ -397,7 +431,8 @@
   }
 }
 .deal-wrapper {
-  padding: 2rem;
+  margin-top: 2rem;
+
   font-family: 'Outfit', sans-serif;
 }
 
@@ -406,7 +441,7 @@
   font-size: 24px;
   font-weight: bold;
   color: #184363;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; 
   position: relative;
 }
 
@@ -425,7 +460,8 @@
   flex-wrap: wrap; 
   gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .deal-card {
@@ -445,7 +481,7 @@
   height: 302.8px;
   object-fit: fill;
   display: block;
-  margin-left: 0; /* Ensure no left spacing */
+  margin-left: 0;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
@@ -504,7 +540,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .medical-card {
@@ -535,9 +571,10 @@
 .medical-card h3 {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
   color: #184363; 
   z-index: 2;
+  
 }
 
 .badge {
@@ -561,6 +598,24 @@
   border-radius: 20px;
   font-size: 14px;
 }
+@media(max-width: 545px){
+  .deal-img{
+    width: 300px;
+  }
+
+.deal-btn {
+padding:7px 10px;
+font-size:14px;
+margin-bottom: 4px;
+}
+
+.deal-card{
+  flex-direction:column;
+  width:300px;
+  padding: 0  0 0 0;
+}
+}
+
  .gnarly {
   padding: 3rem;
   margin-top: 50px;
@@ -657,6 +712,7 @@
   font-weight:400;
   color: #1d3557;
   margin-bottom: 40px;
+  text-align: left;
 }
 
 .reviews-wrapper {
@@ -664,6 +720,7 @@
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .review-card {
@@ -711,46 +768,184 @@
   position: relative; 
 }
 
-.last-card .arrows {
-  position: absolute;
-  top: -60px;       
-  right: -43px;     
+.arrows {
   display: flex;
   gap: 10px;
-  z-index: 5;
-  width: 74.05714416503933px;
-  height:72px;
+  position: absolute;
+  top: -90px;
+  right: -10px;
 }
+.review-card:last-child {
+  position: relative;
+}
+
 
 
 .arrow {
   background-color: white;
-  color:#0A2640;
   border: none;
   border-radius: 50%;
-  width: 37.028572082519666px;
-  height: 39px;
-  font-size: 1.2rem;
+  width: 74.06px;
+  height: 72px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  cursor: default;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
+.arrow img {
+  width: 37.03px;
+  height: 39px;
+}
+@media (max-width:1238px) {
+  /* .reviews-wrapper{
+    position: relative;
+    align-items:center;
+  }
+   .arrows {
+    position: static;
+    margin-bottom: 20px;
+    justify-content: center;
 
+  } */
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .arrow img {
+    width: 16px;
+    height: 16px;
+  }
+  
+}
 
 @media (max-width: 768px) {
   .reviews-wrapper {
     flex-direction: column;
     align-items: center;
+    position:relative;
   }
 
   .review-card {
     max-width: 90%;
   }
 
-  .last-card .arrows {
-    top: 10px;
-    right: 10px;
+  .arrows {
+    position: static;
+    margin-bottom: 20px;
+    justify-content: center;
+
+  }
+
+  .arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+  .arrow img {
+    width: 16px;
+    height: 16px;
   }
 }
+@media (max-width:560px){
+  .reviews-section h2{
+    font-size:8vw;
+  }
+  .review-card{
+  width: 50vw;
+  height:50vw;
+  }
+  .review-card p{
+    font-size: 20px;
+  }
+  .user-info h4 {
+  font-size: 14px;
+  
+}
+.user-info p {
+  font-size: 12px;
+}
+  .arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .arrow img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width:440px) {
+  .reviews-section h2{
+    font-size:6vw;
+  }
+ .review-card{
+  width: 50vw;
+  height:50vw;
+  }
+  .review-card p{
+    font-size: 18px;
+  }
+    .user-info h4 {
+  font-size: 12px;
+  
+}
+.user-info p {
+  font-size: 10px;
+}
+.user-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+  .arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  .arrow img {
+    width: 12px;
+    height: 12px;
+  }
+
+}
+@media(max-width:394px){
+  .review-card{
+    width:41vw;
+
+  }
+  .review-card p{
+    font-size: 4vw;
+  }
+    .user-info h4 {
+  font-size: 2vw;
+  
+}
+.user-info p {
+  font-size: 2vw;
+}
+.user-info img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+  .arrow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .arrow img {
+    width: 10px;
+    height: 10px;
+  }
+
+
+}
+
 
 .man-text {
   background: url('./assets/images/Rectangle 1905.png') no-repeat center center;
