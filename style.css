@@ -200,7 +200,7 @@
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
-  /* border: 1px  #ccc; */
+  
 }
 
 .search-bar input {
@@ -717,6 +717,7 @@ margin-bottom: 4px;
   max-width: 100%;
   height: auto;
   display: inline-block;
+
 }
 
 .polygon {
@@ -734,18 +735,16 @@ margin-bottom: 4px;
   height: auto;
   pointer-events: none;
 }
-
 .content {
   font-weight: 500;
   font-size: 72px;
   max-width: 600px;
-  margin-left:auto;
+  /* margin-left:80px; */
   display: flex;
   flex-direction: column;
   flex: 1;
   flex-wrap: wrap;
   word-wrap: break-word;
-   transform: translateX(0.2%);
 }
 
 .content span {
